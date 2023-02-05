@@ -2,7 +2,7 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-"name":"Joao", "email": "joao@gmail.com", "password": "654321"
+"name":"Jao", "email": "jao@gmail.com", "password": "654321"
 }
 
 ### 
@@ -10,11 +10,11 @@ POST http://localhost:3003/post/create
 Content-Type: application/json
 
 {
-"photo":"Foto do gato", "description": "Gato com lingua pra fora", "type": "normal", "authorId": "59d42260-37a1-4f05-b20a-da5674f58c77"
+"photo":"Foto do cachorro", "description": "Gato com lingua pra fora", "type": "normal", "authorId": "59d42260-37a1-4f05-b20a-da5674f58c77"
 }
 
 ### 
-GET http://localhost:3003/post/getId/4299105a-1d06-447f-a1e2-d8abbb5e2516 
+GET http://localhost:3003/post/getId/dcd74e21-a110-4038-8f28-6525f2d0bbb8
 Content-Type: application/json
 
 ### 
@@ -32,3 +32,7 @@ Content-Type: application/json
 {
 "idUser":"59d42260-37a1-4f05-b20a-da5674f58c77", "idFriend":"3f89e2d0-763b-4e89-9f50-bf718d1c6158"
 }
+
+### 
+GET http://localhost:3003/post/seeFeed 
+Content-Type: application/json

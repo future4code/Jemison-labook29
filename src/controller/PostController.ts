@@ -35,4 +35,17 @@ export class PostController {
             throw new Error(error.message)
         }
     }
+
+    public seeFeed = async (req: Request, res: Response) => {
+        try {
+            const postBusiness = new PostBusiness()
+            const result = await postBusiness.seeFeed()
+
+            res.status(200).send({ result })
+
+        } catch (error: any) {
+            throw new Error(error.message)
+
+        }
+    }
 }

@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "a5a5a6c7-05cc-4b91-a828-b527af55165e",
+		"name": "NWFS LaBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22376492"
+	},
+	"item": [
+		{
+			"name": "seeFeed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/post/seeFeed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"post",
+						"seeFeed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endFriendship",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"idUser\":\"59d42260-37a1-4f05-b20a-da5674f58c77\", \"idFriend\":\"3f89e2d0-763b-4e89-9f50-bf718d1c6158\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/endFriendship",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"endFriendship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "makeFriendship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"idUser\":\"59d42260-37a1-4f05-b20a-da5674f58c77\", \"idFriend\":\"3f89e2d0-763b-4e89-9f50-bf718d1c6158\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/makeFriendship",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"makeFriendship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "dcd74e21-a110-4038-8f28-6525f2d0bbb8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3003/post/getId/dcd74e21-a110-4038-8f28-6525f2d0bbb8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"post",
+						"getId",
+						"dcd74e21-a110-4038-8f28-6525f2d0bbb8"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"photo\":\"Foto do passarinho\", \"description\": \"Passarinho voando\", \"type\": \"normal\", \"authorId\": \"59d42260-37a1-4f05-b20a-da5674f58c77\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/post/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Augusto\", \"email\": \"augusto@gmail.com\", \"password\": \"654789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

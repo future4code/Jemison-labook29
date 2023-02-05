@@ -37,4 +37,14 @@ export class PostBusiness {
         }
     }
     
+    public seeFeed = async () =>{
+        try{
+
+            const postDatabase = new PostDatabase()
+            return await postDatabase.seeFeed()
+
+        }catch(error:any){
+            throw new Error(error.message)
+        }
+    }
 }

@@ -47,4 +47,23 @@ export class PostDatabase extends BaseDatabase {
             PostDatabase.connection.destroy()
         }
     }
+
+    public seeFeed = async () => {
+        try {
+            PostDatabase.connection.initialize()
+            const result = await PostDatabase.connection()
+                .select("*")
+                .from(this.postTable)
+                .orderBy("created_at", "DESC")
+
+            return result
+
+        } catch (error: any) {
+            throw new Error(error.message)
+
+        } finally {
+            console.log("Conexão encerrada!")
+            PostDatabase.connection.destroy()
+        }
+    }
 }
